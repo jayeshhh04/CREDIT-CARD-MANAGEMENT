@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulated Credit Card Checkout</title>
+</head>
+<style>
+    body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+.card-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 400px;
+    margin: 0 auto;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.card-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.input-group {
+    margin-bottom: 10px;
+    display: flex;
+}
+
+.input-group label {
+    width: 120px;
+    text-align: right;
+    margin-right: 10px;
+}
+
+.input-group input {
+    flex: 1;
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+}
+
+.button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #45A049;
+}
+
+</style>
+<body>
+    <div class="card-container">
+        <h2>Simulated Credit Card Checkout</h2>
+        <p>Please note that this is a simulated checkout form and does not process real credit card information.</p>
+        <form id="checkout-form" action="connect.php" method="POST">
+            <div class="input-group">
+                <label for="card-holder">Card Holder</label>
+                <input type="text" id="card-holder" name="card-holder" required>
+            </div>
+            <div class="input-group">
+                <label for="card-number">Card Number (Simulated)</label>
+                <input type="text" id="card-number" name="card-number" required pattern="[0-9]{16}"> </div>
+            <div class="input-group">
+                <label for="expiry-date">Expiry Date (Simulated)</label>
+                <input type="text" id="expiry-date" name="expiry-date" required pattern="[0-9]{2}/[0-9]{2}"> </div>
+            <div class="input-group">
+                <label for="cvv">CVV (Simulated)</label>
+                <input type="text" id="cvv" name="cvv" required pattern="[0-9]{3}"> </div>
+            <button type="submit">Submit (Simulation Only)</button>
+        </form>
+        <div class="credit-card-preview">
+            </div>
+    </div>
+    <!-- <script>
+        const checkoutForm = document.getElementById('checkout-form');
+
+checkoutForm.addEventListener('submit', (event) => {
+  event.preventDefault(); // Prevent default form submission
+
+  const cardHolder = document.getElementById('card-holder').value;
+  const cardNumber = document.getElementById('card-number').value;
+  const expiryDate = document.getElementById('expiry-date').value;
+  const cvv = document.getElementById('cvv').value;
+}
+);
+
+    </script> -->
+</body>
+</html>
